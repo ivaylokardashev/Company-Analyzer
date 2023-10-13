@@ -2,6 +2,10 @@ def gross_profit_margin(balance_sheet):
     return balance_sheet.get("gross_profit") / balance_sheet.get("total_revenue") * 100
 
 
+def net_profit_margin(balance_sheet):
+    return balance_sheet.get("net_income") / balance_sheet.get("total_revenue") * 100
+
+
 def debt_to_equity_ratio(balance_sheet):
     return balance_sheet.get("total_liabillities") / balance_sheet.get("stock_equity")
 
