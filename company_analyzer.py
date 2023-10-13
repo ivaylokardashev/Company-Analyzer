@@ -42,4 +42,11 @@ balance_sheet = {"gross_profit": 104956000, "total_revenue": 274515000, "net_inc
                  "stock_equity": 201442000, "total_liabillities": 74467231, "total_assets": 96334, "inventar": 20497,
                  "current_liabilities": 87812}
 
+print(sign_for_companies_finance_health(balance_sheet))
+print(f"{quick_ratio(balance_sheet):.2f}")
+print(f"{current_ratio(balance_sheet):.3f}")
+
+earnings_for_last_seven_years = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 3]
+
+print(price_to_average_earn(earnings_for_last_seven_years))
 
