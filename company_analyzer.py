@@ -1,3 +1,5 @@
+from math import ceil
+
 def gross_profit_margin(balance_sheet):
     return balance_sheet.get("gross_profit") / balance_sheet.get("total_revenue") * 100
 
@@ -25,7 +27,16 @@ def sign_for_companies_finance_health(balance_sheet):
     else:
         return "The company isn't in good finance state."
 
-    
+
+def price_to_average_earn(earnings_for_last_seven_years):
+    UPPER_LIMIT = 25
+    total_earnings_for_last_seven_years = sum(earnings_for_last_seven_years)
+    price_for_average_earnings_per_share = total_earnings_for_last_seven_years / 7
+    real_price_of_share = ceil(price_for_average_earnings_per_share * UPPER_LIMIT * 100) / 100
+
+    return real_price_of_share
+
+
 '''Example'''
 balance_sheet = {"gross_profit": 104956000, "total_revenue": 274515000, "net_income": 57411000,
                  "stock_equity": 201442000, "total_liabillities": 74467231, "total_assets": 96334, "inventar": 20497,
